@@ -12,7 +12,7 @@ interface Props {
   activeLink: string | undefined;
 }
 
-export const Header = React.memo<Props>(({activeLink}) => {
+export const Header = React.memo<Props>(({ activeLink }) => {
   const [show, setShow] = useState(false);
   const [headerTop, setHeaderTop] = useState(true);
 
@@ -46,7 +46,11 @@ export const Header = React.memo<Props>(({activeLink}) => {
         {headerItems
           .filter((item) => item.slug !== "contact")
           .map((item, i) => (
-            <HeaderLink active={activeLink === item.slug} onClick={() => scrollToSection({ id: item.slug })} key={i}>
+            <HeaderLink
+              active={activeLink === item.slug}
+              onClick={() => scrollToSection({ id: item.slug })}
+              key={i}
+            >
               {item.title}
             </HeaderLink>
           ))}
@@ -57,7 +61,10 @@ export const Header = React.memo<Props>(({activeLink}) => {
             <Icon className={link.className} />
           </IconLink>
         ))}
-        <ContactLink onClick={() => scrollToSection({ id: "contact" })} top={headerTop}>
+        <ContactLink
+          onClick={() => scrollToSection({ id: "contact" })}
+          top={headerTop}
+        >
           Get in touch
         </ContactLink>
       </SocialLinks>
@@ -100,6 +107,7 @@ const HeaderLink = styled.button<{ active: boolean }>(({ active }) => ({
   background: "0",
   border: "0",
   color: "inherit",
+  cursor: "pointer",
   fontSize: "18px",
   margin: "0 32px",
   textDecoration: active ? "underline" : "none",
@@ -119,7 +127,7 @@ const ContactLink = styled.a<{ top: boolean }>(({ top }) => ({
 
   "&:hover": {
     opacity: ".8",
-  }
+  },
 }));
 
 const HeaderLinks = styled.div({
