@@ -18,7 +18,10 @@ export const useIntersect = ({
         setTargetRatios((current) => {
           const updated = new Map(current.entries());
           entries.forEach((entry) => {
-            updated.set(entry.target, { intersectionRatio: entry.intersectionRatio, isIntersecting: entry.isIntersecting });
+            updated.set(entry.target, {
+              intersectionRatio: entry.intersectionRatio,
+              isIntersecting: entry.isIntersecting,
+            });
           });
           return updated;
         });
@@ -27,9 +30,10 @@ export const useIntersect = ({
         root,
         rootMargin,
         threshold,
-      },
+      }
     );
 
+    // eslint-disable-next-line array-callback-return
     targets.map((targetElement) => {
       observer.observe(targetElement);
     });
@@ -40,7 +44,10 @@ export const useIntersect = ({
   const current = useMemo(() => {
     const sorted = Array.from(targetRatios.entries())
       .filter(([_key, value]) => value.isIntersecting)
-      .sort(([_aKey, aValue], [_bKey, bValue]) => aValue.intersectionRatio - bValue.intersectionRatio);
+      .sort(
+        ([_aKey, aValue], [_bKey, bValue]) =>
+          aValue.intersectionRatio - bValue.intersectionRatio
+      );
 
     if (sorted.length > 0) {
       return sorted[0][0];
