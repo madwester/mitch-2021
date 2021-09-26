@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import FONTS from "../shared/fonts";
 import { headerItems } from "../shared/headerItems";
-import { BREAKPOINT_HEADER } from "../shared/breakpoints";
+import BREAKPOINTS from "../shared/breakpoints";
 import { Menu } from "./Menu";
 import { socialLinks } from "../shared/socialLinks";
 import scrollIntoView from "smooth-scroll-into-view-if-needed";
@@ -132,7 +132,7 @@ const ContactLink = styled.a<{ top: boolean }>(({ top }) => ({
 }));
 
 const HeaderLinks = styled.div({
-  [`@media (max-width: ${BREAKPOINT_HEADER}px)`]: {
+  [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     display: "none",
   },
 });
@@ -142,7 +142,7 @@ const SocialLinks = styled.div({
   display: "flex",
   justifyContent: "flex-end",
 
-  [`@media (max-width: ${BREAKPOINT_HEADER}px)`]: {
+  [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     display: "none",
   },
 });
@@ -160,7 +160,7 @@ const Icon = styled.i({
 const BurgerMenuButton = styled.button({
   display: "none",
 
-  [`@media (max-width: ${BREAKPOINT_HEADER}px)`]: {
+  [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     display: "flex",
     position: "relative",
     alignItems: "center",

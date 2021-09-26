@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
 import BREAKPOINTS from "../shared/breakpoints";
-import { Gap } from "./Gap";
 
 interface Props {
   heading?: string;
@@ -17,7 +16,6 @@ export const ImageWithText = React.memo<Props>(
       <ItemContent reverse={reversed}>
         {heading == null ? null : <h2>{heading}</h2>}
         <p>{subheading}</p>
-        <Gap height={32} />
       </ItemContent>
     </Row>
   )
@@ -27,13 +25,14 @@ const Row = styled.div<{ reverse: boolean }>(({ reverse }) => ({
   display: "flex",
   flexDirection: reverse ? "row-reverse" : "row",
   height: "600px",
-  margin: "0 auto",
+  margin: "0 auto 64px",
   textAlign: "left",
   width: "100%",
 
   [`@media (max-width: ${BREAKPOINTS.small}px)`]: {
     flexDirection: "column-reverse",
     height: "auto",
+    marginBottom: "32px",
   },
 }));
 
@@ -58,6 +57,10 @@ const ItemContent = styled.div<{ reverse: boolean }>(({ reverse }) => ({
 
   "& h2": {
     marginBottom: "24px",
+  },
+
+  "& p": {
+    marginBottom: "32px",
   },
 
   [`@media (max-width: ${BREAKPOINTS.small}px)`]: {

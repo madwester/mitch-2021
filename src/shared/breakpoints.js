@@ -5,6 +5,6 @@ const BREAKPOINTS = {
   large: "1199",
 };
 
-export const BREAKPOINT_HEADER = "1020";
+export const BREAKPOINT_HEADER = "1040";
 
 export default BREAKPOINTS;

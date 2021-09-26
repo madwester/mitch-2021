@@ -60,10 +60,10 @@ const Link = styled.a({
 });
 
 const FooterContainer = styled.div({
-  marginTop: "60px",
+  marginTop: "40px",
 
   [`@media (max-width: ${BREAKPOINTS.small}px)`]: {
-    marginTop: "40px",
+    marginTop: "32px",
   },
 });
 
