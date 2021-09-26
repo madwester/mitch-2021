@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { ImageWithText } from "../components/ImageWithText";
 import PlaceholderImage from "../images/withBird.jpg";
 
 export const Film = React.memo(() => {
