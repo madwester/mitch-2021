@@ -6,32 +6,29 @@ import FONTS from "../shared/fonts";
 const Testimonials = [
   {
     name: "Luke Sullivan, Elham Hotel",
-    text:
-      "Lorem ipsum dolor, sit amet consectetur consequuntur quia odit ea tempora.",
+    text: "Lorem ipsum dolor, sit amet consectetur consequuntur quia odit ea tempora.",
   },
   {
-    name: "Alexandra Forde",
-    text:
-      "Maiores eos recusandae praesentium corporis officia quibusdam. Ecusandae praesentium corporis officia quibusdam. ",
+    name: "Jarrod Pearse, Event coordinator",
+    text: "I’ve seen Mitch play a few times now, onstage with a full band, a wedding and going solo midweek down at the local. Aside from his obvious songwriting skills, flexibility and drop dead good looks, he consistently blows me away with his unique talent of being able to read the room, understand the mood and set e scene. Whether it’s a wedding, backyard party or battling against the backdrop of the footy at the pub, he nails it everytime.",
   },
   {
-    name: "Ashley Middleton",
-    text:
-      "You made my Saturday night an absolute dream. Everyone had so much fun and could not stop talking about how great you were!! We truly can not tell you how in awe of your music and energy we all were and just how bloody thankful we are!!",
+    name: "Ashley Middleton, Bride",
+    text: "You made our engagement party an absolute dream. Everyone had so much fun and could not stop talking about how great you were!! We truly can not tell you how in awe of your music and energy we all were and just how bloody thankful we are!! Thank you again so so much you absolute legend!",
   },
 ];
 
 export const Events = React.memo(() => (
-  <Container>
+  <div style={{ textAlign: "center" }}>
     <h1>Wedding, party or corporate event?</h1>
-    <Gap height={32} />
     <p>
-      Currently residing by the beach in Bondi. You will find him playing solo
-      gigs and with his band at bars, cafes, wineries, weddings and parties
-      around Sydney, the Southern Highlands, the South Coast, Northern Beaches
-      and Northern Rivers of NSW. He aims to inspire people to channel their
-      energy into a creative outlet in order to live a happier more creative
-      life.
+      You will find him playing gigs solo and with his band at bars, cafes,
+      wineries, weddings and parties around Sydney, the Southern Highlands, the
+      South Coast, Northern Beaches and Northern Rivers of NSW. He aims to
+      inspire people to channel their energy into a creative outlet in order to
+      live a happier more creative life. Mitch is following his passion of
+      songwriting and performing to live audiences, small and large. He is
+      currently working on his debut album from his garage in Bondi.
     </p>
     <Gap />
     <TestimonialRow>
@@ -45,12 +42,8 @@ export const Events = React.memo(() => (
         </TestimonialItem>
       ))}
     </TestimonialRow>
-  </Container>
+  </div>
 ));
-
-const Container = styled.div({
-  textAlign: "center",
-});
 
 const TestimonialRow = styled.div({
   display: "grid",

@@ -12,7 +12,8 @@ import { Biography } from "./sections/Biography";
 import { Contact } from "./sections/Contact";
 import { Events } from "./sections/Events";
 import { Listen } from "./sections/Listen";
-import { useIntersect} from "./hooks/useIntersect";
+import { Film } from "./sections/Film";
+import { useIntersect } from "./hooks/useIntersect";
 import BREAKPOINTS from "./shared/breakpoints";
 
 // Todo:
@@ -27,14 +28,19 @@ const App = React.memo(() => {
   const [ref2, setRef2] = useState<HTMLElement | null>(null);
   const [ref3, setRef3] = useState<HTMLElement | null>(null);
   const [ref4, setRef4] = useState<HTMLElement | null>(null);
+  const [ref5, setRef5] = useState<HTMLElement | null>(null);
 
-  const targets = useMemo(() => [ref1, ref2, ref3, ref4].filter((r): r is HTMLElement => r !== null), [
-    ref1, ref2, ref3, ref4
-  ]);
+  const targets = useMemo(
+    () =>
+      [ref1, ref2, ref3, ref4, ref5].filter(
+        (r): r is HTMLElement => r !== null
+      ),
+    [ref1, ref2, ref3, ref4, ref5]
+  );
 
   const currentSection = useIntersect({
     targets,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (
@@ -52,7 +58,10 @@ const App = React.memo(() => {
         <Section id="events" ref={setRef3}>
           <Events />
         </Section>
-        <Section id="contact" ref={setRef4}>
+        <Section id="film" ref={setRef4}>
+          <Film />
+        </Section>
+        <Section id="contact" ref={setRef5}>
           <Contact />
           <Instagram />
         </Section>
@@ -62,8 +71,8 @@ const App = React.memo(() => {
   );
 });
 
-const Main = styled.div({ 
-  position: "relative"
+const Main = styled.div({
+  position: "relative",
 });
 
 const Container = styled.div({
@@ -88,4 +97,3 @@ const Section = styled.div({
 });
 
 export default App;
-

@@ -7,20 +7,15 @@ import Image1 from "../images/wedding1.png";
 export const Biography = React.memo(() => (
   <>
     <ImageWithText
-      heading="Lorem Ipsum is simply dummy text of the printing and"
+      heading="Biography"
       imageSrc={Image1}
-      subheading="Mitch Tolnay performs vocals and guitar on folk/ reggae/ relaxed blues style covers and originals. 
-      Born and raised in Mittagong (Koori word for “little mountain”) he learnt piano and guitar from a young age. He was inspired in his early childhood by what he describes as a  “melting pot of successful Australian musicians” that inhabited his area."
+      subheading="Mitch Tolnay performs vocals and guitar on folk/ reggae/ relaxed blues style covers and originals. Born and raised in Mittagong (Koori word for “little mountain”) he learnt piano and guitar from a young age. He was inspired in his early childhood by what he describes as a “melting pot of successful Australian musicians” that inhabited his area."
     />
     <Gap />
     <ImageWithText
-      heading="Lorem Ipsum is simply dummy text of the printing and"
       imageSrc={Image2}
-      subheading="After travelling the globe for most of his twenties he returned home feeling a little lost and unsure of what to do with this life in this world. A chance encounter with an elder gave him the realisation he needed to face his fear of singing and performing. 
-      He decided to develop his craft while living as a busking musician hitchhiking around New Zealand drawing inspiration from travel, nature, the bush, ocean and life experiences we all share on this beautiful, yet extremely bizarre journey we call life. "
+      subheading="After spending his twenties travelling the globe, he returned home feeling a little lost and unsure of what to do with his life in this world. A chance encounter with an elder gave him the realisation he needed to face his fear of singing and performing. He decided to develop his craft while living as a busking musician hitchhiking around New Zealand drawing inspiration from travel, nature, the bush, ocean and life experiences we all share on this beautiful, yet extremely bizarre journey we call life."
       reversed
     />
   </>
 ));
-
-

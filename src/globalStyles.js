@@ -19,9 +19,11 @@ export const globalStyles = css({
   h1: {
     fontWeight: 700,
     fontSize: "50px",
+    marginBottom: "32px",
 
     [`@media (max-width: ${BREAKPOINTS.small}px)`]: {
       fontSize: "42px",
+      marginBottom: "24px",
     },
   },
   h2: {
@@ -41,6 +43,7 @@ export const globalStyles = css({
     },
   },
   p: {
+    fontSize: "18px",
     lineHeight: 1.5,
   },
 });

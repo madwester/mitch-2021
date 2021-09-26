@@ -12,6 +12,10 @@ export const headerItems = [
     slug: "events",
   },
   {
+    title: "Film & TVC‘s",
+    slug: "film",
+  },
+  {
     title: "Get in touch",
     slug: "contact",
   },

@@ -12,7 +12,7 @@ export const Instagram = React.memo(() => {
   }
 
   const accessToken =
-    "IGQVJWc0UzRUtHVG5FOWFhUE1TTnVSY2k3UVZA2WGdodE8zMnJwTEhQMkd0QWpxcmVCWGFlUkxvSk9makJTbmJjU29pbE9QaUdfRlNMM1ZA6a25nNEd4akhfcEMza0dhRlFQSkxGRk9lMmttT21naHJQdAZDZD";
+    "IGQVJVRHR6VGJJSkVsR3VRcEdWcTNzajRnQlNFSUs5aFFuNVJLV0p4OE1GWmxVN3dKVE90MjRXbGNMUElUUFJKYWhxUlBYc3dxUWczXzFaWnFlTmxKNV93ME5aY05sRGxudWdFYVF5MGpENC1JZAjZArTQZDZD";
   const url = `https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`;
   const [data, setData] = useState<InstagramData[]>([]);
 

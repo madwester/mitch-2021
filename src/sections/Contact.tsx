@@ -1,16 +1,13 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { Gap } from "../components/Gap";
 import BREAKPOINTS from "../shared/breakpoints";
 
 export const Contact = React.memo(() => (
-  <Container>
+  <div style={{ textAlign: "center" }}>
     <h1>Get in touch!</h1>
-    <Gap height={32} />
     <div style={{ margin: "0 auto", maxWidth: "720px" }}>
-      Mitch is currently working on a debut album and following his passion of
-      songwriting and performing to live audiences, small and large. And he
-      would love you to get in touch!
+      Need to hire a musician? Mitch has everything you need for the music to be
+      taken care of at your event. He would love you to get in touch!
       <Links>
         <Link href="tel:+61452618823">
           <Icon className="fas fa-phone" /> +61 (0) 452-61 88 23
@@ -20,12 +17,8 @@ export const Contact = React.memo(() => (
         </Link>
       </Links>
     </div>
-  </Container>
+  </div>
 ));
-
-const Container = styled.div({
-  textAlign: "center",
-});
 
 const Icon = styled.i({
   color: "black",

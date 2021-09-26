@@ -91,6 +91,7 @@ const Wrapper = styled.div<{ top: boolean }>(({ top }) => ({
   right: 0,
   top: 0,
   transition: "0.2s all",
+  zIndex: 2,
 }));
 
 const Logo = styled.a({
