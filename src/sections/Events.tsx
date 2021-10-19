@@ -5,7 +5,7 @@ import FONTS from "../shared/fonts";
 
 const Testimonials = [
   {
-    name: "Luke Sullivan, Elham Hotel",
+    name: "Luke Sullivan, Eltham Hotel",
     text: "Mitch tolnay is a musical force. A talented multi-instrumentalist, his repertoire comes loaded with experience and a mixed set list that seamlessly moulds to suit the crowd. His performances are engaging and always leave the crowds wanting more. He is our go to gig when we are lucky enough to have him in the Northern Rivers. And he loves a beer - 5 stars ;)",
   },
   {
