@@ -92,7 +92,7 @@ const Section = styled.div({
   padding: "128px 0 0",
 
   [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
-    padding: "72px 32px",
+    padding: "128px 32px 0",
   },
 });
 

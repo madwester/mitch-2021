@@ -22,7 +22,7 @@ export const globalStyles = css({
     marginBottom: "32px",
 
     [`@media (max-width: ${BREAKPOINTS.small}px)`]: {
-      fontSize: "42px",
+      fontSize: "34px",
       marginBottom: "24px",
     },
   },

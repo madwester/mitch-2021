@@ -39,6 +39,10 @@ export const Header = React.memo<Props>(({ activeLink }) => {
     }
   }, []);
 
+  const onMenuLinkItemClick = () => {
+    setShow(false);
+  };
+
   return (
     <Wrapper id="header" top={headerTop}>
       <Logo href="/">Mitch Tolnay</Logo>
@@ -72,7 +76,7 @@ export const Header = React.memo<Props>(({ activeLink }) => {
         <BurgerLine active={show} className="top" />
         <BurgerLine active={show} className="bottom" />
       </BurgerMenuButton>
-      <Menu show={show} />
+      <Menu onLinkClick={onMenuLinkItemClick} show={show} />
     </Wrapper>
   );
 });

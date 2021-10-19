@@ -5,27 +5,30 @@ import { headerItems } from "../shared/headerItems";
 import { socialLinks } from "../shared/socialLinks";
 
 interface Props {
+  onLinkClick: () => void;
   show: boolean;
 }
 
-export const Menu = React.memo<Props>(({ show }) => (
-  <Container show={show}>
-    <Links>
-      {headerItems.map((item, i) => (
-        <Link href={`/#${item.slug}`} key={i}>
-          {item.title}
-        </Link>
-      ))}
-    </Links>
-    <SocialLinks>
-      {socialLinks.map((link, i) => (
-        <IconLink href={link.href} key={i}>
-          <Icon className={link.className} />
-        </IconLink>
-      ))}
-    </SocialLinks>
-  </Container>
-));
+export const Menu = React.memo<Props>(({ onLinkClick, show }) => {
+  return (
+    <Container show={show}>
+      <Links>
+        {headerItems.map((item, i) => (
+          <Link href={`/#${item.slug}`} key={i} onClick={onLinkClick}>
+            {item.title}
+          </Link>
+        ))}
+      </Links>
+      <SocialLinks>
+        {socialLinks.map((link, i) => (
+          <IconLink href={link.href} key={i}>
+            <Icon className={link.className} />
+          </IconLink>
+        ))}
+      </SocialLinks>
+    </Container>
+  );
+});
 
 const Container = styled.div<{ show: boolean }>(({ show }) => ({
   background: "white",
@@ -56,7 +59,7 @@ const Link = styled.a({
 });
 
 const SocialLinks = styled.div({
-  padding: "80px 0",
+  padding: "0 0 80px",
   textAlign: "center",
 });
 

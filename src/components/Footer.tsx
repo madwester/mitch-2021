@@ -83,7 +83,7 @@ const Inner = styled.div<{ background: string }>(({ background }) => ({
   background,
   color: "white",
   padding: "60px 32px 60px",
-  marginTop: "-7px",
+  marginTop: "-8px",
 }));
 
 const Right = styled.div({
