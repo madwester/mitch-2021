@@ -7,7 +7,7 @@ export const Film = React.memo(() => {
     <div style={{ textAlign: "center" }}>
       <h1>Film & TVC‘s</h1>
       <p>
-        In addition to playing music Mitch has years of experience working in
+        In addition to playing music Mitch has 5 years of experience working in
         the art department for film and TV. Together with his van he can assist
         you and your project with all things sets, props and wardrobe.
       </p>
