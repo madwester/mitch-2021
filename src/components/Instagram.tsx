@@ -12,7 +12,7 @@ export const Instagram = React.memo(() => {
   }
 
   const accessToken =
-    "IGQVJVRHR6VGJJSkVsR3VRcEdWcTNzajRnQlNFSUs5aFFuNVJLV0p4OE1GWmxVN3dKVE90MjRXbGNMUElUUFJKYWhxUlBYc3dxUWczXzFaWnFlTmxKNV93ME5aY05sRGxudWdFYVF5MGpENC1JZAjZArTQZDZD";
+    "IGQVJVbEc1RG10Mmo3QjZA1Y0ZAQMXU3VGtRRjBaQWtWcDhFV1dycVpxcnFBUjE1QU5kUEo0V1lYeWRIQU9JSEx6NnlqTXhnS3FacFZAtMUlGdTdpblp0djlFcmtwOGlTc1pPUTRDX1BVWE5PbTNNNUVJdQZDZD";
   const url = `https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`;
   const [data, setData] = useState<InstagramData[]>([]);
 
@@ -21,7 +21,8 @@ export const Instagram = React.memo(() => {
       const response = await fetch(url);
       const responseData = await response.json();
       if (response.ok) {
-        const eightImages = responseData.data.slice(0, 8);
+        console.log("responseData.data",responseData.data);
+        const eightImages = responseData.data.filter((i: InstagramData) => i.media_type !== "VIDEO").slice(0, 8);
         setData(eightImages);
       } else {
         console.log("error");
