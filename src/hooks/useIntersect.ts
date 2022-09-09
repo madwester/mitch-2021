@@ -37,7 +37,6 @@ export const useIntersect = ({
     targets.map((targetElement) => {
       observer.observe(targetElement);
     });
-
     return () => observer.disconnect();
   }, [root, rootMargin, targets, threshold, setTargetRatios]);
 
