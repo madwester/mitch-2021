@@ -11,9 +11,10 @@ export const Instagram = React.memo(() => {
     permalink: string;
   }
 
-  const accessToken =
-    "IGQVJVbEc1RG10Mmo3QjZA1Y0ZAQMXU3VGtRRjBaQWtWcDhFV1dycVpxcnFBUjE1QU5kUEo0V1lYeWRIQU9JSEx6NnlqTXhnS3FacFZAtMUlGdTdpblp0djlFcmtwOGlTc1pPUTRDX1BVWE5PbTNNNUVJdQZDZD";
-  const url = `https://graph.instagram.com/me/media?access_token=${accessToken}&fields=media_url,media_type,caption,permalink`;
+  const token =
+    "EAAMamZAsHyjMBAG9btZCKZBFz8hkd1WjLJjSZADZB6ZBDLWy1PJ7TIom1hihitZCZB9C2pzrogVuKriOvLZAy4ZAxhamdH3CCPvN9I1RKXbPNu9wjoU41HEk1m9ZCtpDXzEnZC1y11Mg53BfZBgtug5BRwNysdGc09CeE8ZBnCfEFQP7BxZBwI2btw9GvZBEKsWPVVdLtbPBzYNdAH4zHWOsSiflP9DL66RO1varmaFVulgvPWZAeh8zZAyyXFfQax";
+  const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=media_url,media_type,caption,permalink`;
+
   const [data, setData] = useState<InstagramData[]>([]);
 
   useEffect(() => {
