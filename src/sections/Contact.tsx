@@ -6,8 +6,12 @@ export const Contact = React.memo(() => (
   <div style={{ textAlign: "center" }}>
     <h1>Get in touch!</h1>
     <div style={{ margin: "0 auto", maxWidth: "720px" }}>
-      Need to hire a musician? Mitch has everything you need for the music to be
-      taken care of at your event. He would love you to get in touch!
+      <p>
+        Whether it's a text, email or a slide into his DM on{" "}
+        <a href="https://www.instagram.com/mitchinthemountains/">Instagram</a>.
+        Mitch would love to hear from you.
+      </p>
+
       <Links>
         <Link href="tel:+61452618823">
           <Icon className="fas fa-phone" /> +61 (0) 452-61 88 23

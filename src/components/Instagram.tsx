@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
 import { instagramLink } from "../shared/socialLinks";
 
+// Temporary unused component.
+
 export const Instagram = React.memo(() => {
   interface InstagramData {
     caption: string;
@@ -22,8 +24,10 @@ export const Instagram = React.memo(() => {
       const response = await fetch(url);
       const responseData = await response.json();
       if (response.ok) {
-        console.log("responseData.data",responseData.data);
-        const eightImages = responseData.data.filter((i: InstagramData) => i.media_type !== "VIDEO").slice(0, 8);
+        console.log("responseData.data", responseData.data);
+        const eightImages = responseData.data
+          .filter((i: InstagramData) => i.media_type !== "VIDEO")
+          .slice(0, 8);
         setData(eightImages);
       } else {
         console.log("error");

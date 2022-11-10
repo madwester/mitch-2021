@@ -4,16 +4,16 @@ export const headerItems = [
     slug: "biography",
   },
   {
+    title: "Weddings",
+    slug: "weddings",
+  },
+  {
     title: "Listen",
     slug: "listen",
   },
   {
-    title: "Events & weddings",
-    slug: "events",
-  },
-  {
-    title: "Film & TVC‘s",
-    slug: "film",
+    title: "Testimonials",
+    slug: "testimonials",
   },
   {
     title: "Get in touch",
