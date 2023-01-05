@@ -24,7 +24,7 @@ export const Weddings = React.memo(() => (
         <Heading>Canapes & cocktail</Heading>A pivotal part of your wedding.
         Ceremony is done and dusted and the crew are starting to mingle. The
         first drinks are sliding down. Mitch will provide the perfect atmosphere
-        for your loved ones as they settle in! since the 1500s.
+        for your loved ones as they settle in!
       </div>
       <div>
         <Icon className="fas fa-wine-glass-alt"></Icon>

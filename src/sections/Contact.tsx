@@ -7,7 +7,7 @@ export const Contact = React.memo(() => (
     <h1>Get in touch!</h1>
     <div style={{ margin: "0 auto", maxWidth: "720px" }}>
       <p>
-        Whether it's a text, email or a slide into his DM on{" "}
+        Text, email or a slide into his DM's on{" "}
         <a href="https://www.instagram.com/mitchinthemountains/">Instagram</a>.
         Mitch would love to hear from you.
       </p>
