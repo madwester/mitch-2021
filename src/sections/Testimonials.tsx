@@ -35,7 +35,7 @@ export const Testimonials = React.memo(() => (
 
 const Wrapper = styled.div({
   background: COLORS.beige,
-  padding: "128px 0",
+  padding: "160px 0",
   textAlign: "center",
 
   [`@media (max-width: ${BREAKPOINTS.large}px)`]: {

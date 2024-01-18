@@ -16,15 +16,18 @@ export const Header = React.memo<Props>(({ activeLink }) => {
   const [show, setShow] = useState(false);
   const [headerTop, setHeaderTop] = useState(true);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (document.body.getBoundingClientRect().top > -100) {
-        setHeaderTop(true);
-      } else {
-        setHeaderTop(false);
-      }
-    });
+  const onScroll = useCallback(() => {
+    if (document.body.getBoundingClientRect().top > -100) {
+      setHeaderTop(true);
+    } else {
+      setHeaderTop(false);
+    }
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [onScroll]);
 
   const scrollToSection = useCallback(({ id }: { id: string }) => {
     const section = document.getElementById(id);

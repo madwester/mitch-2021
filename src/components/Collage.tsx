@@ -4,7 +4,7 @@ import PeacePhoto from "../images/beach-road.jpg";
 import Ph2 from "../images/dark1.jpg";
 import DJWedding from "../images/dj-wedding.png";
 import DJ2 from "../images/DJ.jpg";
-import SittingPhoto from "../images/sitting.jpg";
+import ClunesPhoto from "../images/mitch-clunes.jpg";
 import StockImage from "../images/stock-edit.jpg";
 import WeddingPhoto from "../images/wedding1.png";
 import BREAKPOINTS from "../shared/breakpoints";
@@ -16,7 +16,7 @@ export const Collage = React.memo(() => (
 
     <Wedding src={WeddingPhoto} />
     <DJLight src={DJWedding} />
-    <Sitting src={SittingPhoto} />
+    <Sitting src={ClunesPhoto} />
 
     <Peace src={PeacePhoto} />
     <Stock src={StockImage} />
@@ -26,7 +26,7 @@ export const Collage = React.memo(() => (
 const CollageWrapper = styled.div({
   display: "grid",
   gridGap: "16px",
-  marginTop: "128px",
+  marginTop: "160px",
   height: "1200px",
   gridTemplateColumns: "repeat(3, [col] 1fr)",
   gridTemplateRows: "repeat(6, [row] 1fr)",
@@ -70,7 +70,7 @@ const Photo2 = styled.img({
 //Middle
 const Wedding = styled.img({
   gridColumn: "2 / span 1",
-  gridRow: "1 / span 2",
+  gridRow: "5 / span 2",
 
   [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     gridColumn: "3 / span 2",
@@ -90,7 +90,7 @@ const DJLight = styled.img({
 
 const Sitting = styled.img({
   gridColumn: "2 / span 2",
-  gridRow: "5 / span 2",
+  gridRow: "1 / span 2",
 
   [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     display: "none",
@@ -100,7 +100,7 @@ const Sitting = styled.img({
 // Right
 const Peace = styled.img({
   gridColumn: "3 / span 1",
-  gridRow: "1 / span 3",
+  gridRow: "4 / span 3",
 
   [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     gridColumn: "3 / span 2",
@@ -110,7 +110,7 @@ const Peace = styled.img({
 
 const Stock = styled.img({
   gridColumn: "3 / span 1",
-  gridRow: "4 / span 1",
+  gridRow: "3 / span 1",
 
   [`@media (max-width: ${BREAKPOINTS.large}px)`]: {
     display: "none",

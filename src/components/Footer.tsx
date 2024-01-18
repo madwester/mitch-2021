@@ -14,7 +14,7 @@ export const Footer = React.memo(() => (
         <div>
           <Logo>Mitch Tolnay</Logo>
           {socialLinks.map((link, i) => (
-            <IconLink href={link.href} key={i}>
+            <IconLink href={link.href} key={i} target="_blank">
               <Icon className={link.className} />
             </IconLink>
           ))}

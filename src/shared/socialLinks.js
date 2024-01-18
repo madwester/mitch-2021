@@ -13,4 +13,8 @@ export const socialLinks = [
     className: "fab fa-soundcloud",
     href: "https://soundcloud.com/mitchinthemountains",
   },
+  {
+    className: "fab fa-spotify",
+    href: "https://open.spotify.com/artist/6flM4DexqUIDPgHCWvttfl",
+  },
 ];

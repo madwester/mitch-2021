@@ -1,7 +1,6 @@
 import { Global } from "@emotion/react";
 import styled from "@emotion/styled";
 import "@fortawesome/fontawesome-free/js/all";
-import "aos/dist/aos.css";
 import React, { useMemo, useState } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -14,6 +13,7 @@ import { Listen } from "./sections/Listen";
 import { Testimonials } from "./sections/Testimonials";
 import { Weddings } from "./sections/Weddings";
 import BREAKPOINTS from "./shared/breakpoints";
+import { JefferyDay } from "./sections/JefferyDay";
 
 const App = React.memo(() => {
   const [ref1, setRef1] = useState<HTMLElement | null>(null);
@@ -21,6 +21,7 @@ const App = React.memo(() => {
   const [ref3, setRef3] = useState<HTMLElement | null>(null);
   const [ref4, setRef4] = useState<HTMLElement | null>(null);
   const [ref5, setRef5] = useState<HTMLElement | null>(null);
+  const [ref6, setRef6] = useState<HTMLElement | null>(null);
 
   const targets = useMemo(
     () =>
@@ -54,8 +55,11 @@ const App = React.memo(() => {
       <Section id="testimonials" ref={setRef4}>
         <Testimonials />
       </Section>
+      <Section id="jeffery" ref={setRef5} style={{ background: "#b8c8db" }}>
+        <JefferyDay />
+      </Section>
       <Container>
-        <Section id="contact" ref={setRef5}>
+        <Section id="contact" ref={setRef6}>
           <Contact />
         </Section>
       </Container>

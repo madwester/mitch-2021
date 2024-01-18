@@ -16,6 +16,10 @@ export const headerItems = [
     slug: "testimonials",
   },
   {
+    title: "Jeffery Day",
+    slug: "jeffery",
+  },
+  {
     title: "Get in touch",
     slug: "contact",
   },
