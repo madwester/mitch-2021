@@ -16,7 +16,7 @@ export const Collage = React.memo(() => (
 
     <Wedding src={WeddingPhoto} />
     <DJLight src={DJWedding} />
-    <Sitting src={ClunesPhoto} />
+    <Clunes src={ClunesPhoto} />
 
     <Peace src={PeacePhoto} />
     <Stock src={StockImage} />
@@ -88,7 +88,7 @@ const DJLight = styled.img({
   },
 });
 
-const Sitting = styled.img({
+const Clunes = styled.img({
   gridColumn: "2 / span 2",
   gridRow: "1 / span 2",
 
